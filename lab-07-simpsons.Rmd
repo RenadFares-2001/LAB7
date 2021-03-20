@@ -23,6 +23,7 @@ library(mosaicData)
 1.  
 ```{r whickam}
 ?Whickham
+
 ```
     
 Your answer: 
