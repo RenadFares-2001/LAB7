@@ -22,49 +22,69 @@ library(mosaicData)
 
 1.  
 ```{r whickam}
-
+view(Whickham)
 ```
     
-Your answer:
+Your answer: Observation1 , because we just watching the people and write the notes also we didn't involving in any situation or controlling any variables. 
 
 2.  
 ```{r observations}
-
+nrow(Whickham)
 ```
 
-Your answer;
+Your answer; 1314 , represent recorded participants' age, smoking status at baseline .
 
 3.  
 
 ```{r number_variables}
-
+ncol(Whickham)
 ```
 
-Your answer:  
+Your answer:
+3 
+outcome  
+smoker 
+age  
+
 
 ```{r var_type}
+class(Whickham$age)
+class(Whickham$smoker)
+class(Whickham$outcome)
 
 ```
 
-Your answer: 
+Your answer:
+outcome and smoker and age  
+outcome and smoker are (Categorical) and are (Factor)
+age it's (Numerical) and (Integer) 
 
 ```{r plot_outcome}
+ggplot(Whickham, aes(x = outcome)) +
+  geom_bar()
 
 ```
 
 
 ```{r plot_smoker}
+ggplot(Whickham, aes(x = age)) +
+  geom_bar()
 
 ```
 
 ```{r plot_age}
+ggplot(Whickham, aes(x = smoker)) +
+  geom_bar()
 
 ```
 
 
 4. 
-
+I think his health is not good. it is exposed to many substances harmful to the lungs, which lead to the loss of the lungs ability to filter, as well as toxins become confined to the lung and smokers are more susceptible to respiratory infections.
+And+
+I expect the health will be worser and may be the person will be died after while , if he keeping smoke 
 ```{r plot_smokeVSincome_1}
+ggplot(data=Whickham, aes(x=smoker, y=outcome, color=outcome)) + geom_bar(stat="identity")
 
 ```
 
