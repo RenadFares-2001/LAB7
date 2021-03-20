@@ -96,17 +96,28 @@ Knit, commit, and push to github.
 Whickham %>%
   count(smoker, outcome)
 ```
+Smoker "732" (NO) = 0.3142077 (Dead) >> (68.6) Alive
+Smoker "582" (YES) = 0.2388316 (Alive) >> (76.2) Alive
+I doesn't expected this result because now the most died people not smoker.
 
 6.
 
 ```{r age_cat}
+Whickham <- Whickham %>% mutate(age_cat = case_when(age <= 44 ~ "18-14" , age > 44 & age <= 64 ~ "45-64" , age > 64 ~ "65+"))
 
 ```
 
 7. 
 
 ```{r plot_smokeVSincome_3}
+ggplot(data=Whickham, aes(x=outcome, y=smoker,color=smoker, fill=age_cat)) + geom_bar(stat="identity") +facet_wrap(~age_cat)
 
 ```
+what changes :
+The category of the age it's appear to us and we see the most of dead people is smoker in age (65+)
+but in age (45-64) and (18-14)the most dead people is smoker that is relationship between the smoking and heath not clearly but can say that your health will be change to worst if you be smoker and
+The category of the Alive  it's appears in the youth's (18-14) age more  than ( 45-64) and 65+ Also the smoker (YES) it's more Alive in the category age it's (18-14) 
+I believe that the effects increase with age, unlike those who are young and can resist diseases and live more than the age of adults.
+
 
 Knit, commit, and push to github.
