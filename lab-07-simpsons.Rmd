@@ -1,6 +1,6 @@
 ---
 title: "lab-07-simpsons.Rmd"
-author: "Renad Faris Al-Shammari"
+author: "Renad Faris Al-Shammari" ID:"2201003532"
 date: "3 March 2021"
 output: pdf_document
 ---
@@ -40,11 +40,9 @@ Your answer; 1314 , represent recorded participants' age, smoking status at base
 ncol(Whickham)
 ```
 
-Your answer:
-3 
-outcome  
-smoker 
-age  
+Your answer: (3)
+ 
+ [1] "outcome"  "smoker" "age"  
 
 
 ```{r var_type}
